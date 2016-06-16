@@ -8,6 +8,8 @@
 
 namespace roobique\Wrappers
 {
+    use MongoDB;
+    use MongoDB;
 
     class DatabaseWrapper
     {
