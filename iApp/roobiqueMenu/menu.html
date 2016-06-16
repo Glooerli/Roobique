@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./style/menu.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js" integrity="sha256-0vBSIAi/8FxkNOSKyPEfdGQzFDak1dlqFKBYqBp1yC4=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var menu = false;
+	      $('#nav-icon').click(function(){
+		        $(this).toggleClass('open');
+
+            if(!menu){
+              $('#main-menu').css({
+                display: 'block'
+              });
+
+              $('#main-menu').css({
+                overflow: 'hidden'
+              });
+
+              menu = true;
+            }else{
+              $('#main-menu').css({
+                display: 'none'
+              });
+
+              $('#main-menu').css({
+                overflow: 'visible'
+              });
+
+              menu = false;
+            }
+	      });
+      });
+    </script>
+  </head>
+  <body id="body">
+    <div class="navbar">
+      <div class="menu-bg"></div>
+      <div class="nav-roobique-logo">
+        <img src="">
+      </div>
+    </div>
+    <div id="nav-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div id="main-menu">
+      <div class="menu-bg"></div>
+
+      <!-- left column -->
+      <div class="menu-element left" id="top-row">
+        <img class="element-image" src="">
+        <p>Random</p>
+      </div>
+      <div class="menu-element left" id="center-row">
+        <img class="element-image" src="">
+        <p>Search</p>
+      </div>
+      <div class="menu-element left" id="bottom-row">
+        <img class="element-image" src="">
+        <p>Me</p>
+      </div>
+
+      <!-- right column -->
+      <div class="menu-element right" id="top-row">
+        <img class="element-image" src="">
+        <p>News</p>
+      </div>
+      <div class="menu-element right" id="center-row">
+        <img class="element-image" src="">
+        <p>Favorites</p>
+      </div>
+      <div class="menu-element right" id="bottom-row">
+        <img class="element-image" src="">
+        <p>Settings</p>
+      </div>
+    </div>
+  </body>
+</html>

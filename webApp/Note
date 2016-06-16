@@ -1,0 +1,17 @@
+<?php
+  require('./DatabaseWrapper.php');
+
+  use roobique\Database\Wrappers\DatabaseWrapper;
+
+  $DatabaseWrapper = new DatabaseWrapper('roobique');
+                                        //If username eq janos        in dieser Collection
+  $test = $DatabaseWrapper->find(array('username' => 'janos_imhof'), 'Users');
+  echo $test;
+
+
+
+
+
+User in DB Speichern
+Ergibt eine Object ID (Unique)
+Unique ID in Session speichern -> voilà

@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../../html/css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="../../html/css/LukasStyle.css"/>
+		<title>roobique - under construction</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script type="text/javascript">
+			function onPageLoad(){
+				$("#backgroundContainer").load('./particlesBack.html');
+			}
+		</script>
+		<meta name="viewport" content="initial-scale=1"/>
+	</head>
+
+	<body onLoad="onPageLoad();">
+	<div id="backgroundContainer">
+
+		<meta charset="utf-8"/>
+		<meta name="description" content="particles.js is a lightweight JavaScript library for creating particles."/>
+		<meta name="author" content="Vincent Garreau"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<link rel="stylesheet" media="screen" href="../../html/css/style.css"/>
+
+		<!-- particles.js container -->
+		<div id="overLay">
+		</div>
+		<div id="particles-js"><canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1331" height="970"></canvas></div>
+
+		<!-- scripts -->
+		<script src="../../html/js/particles.js">
+
+		</script>
+		<script src="../../html/js/app.js">
+
+		</script>
+
+
+	</div>
+
+		<div class="pageContents">
+			<div class="LogoAndText">
+				<div class="HomeLogo">
+					<img src="../../html/images/Logo.png"/>
+				</div>
+				<div class="logonTitle">
+					<p>roobique</p>
+				</div>
+			</div>
+
+			<div class="imgStrip">
+				<img src="../../html/images/Strich.png"/>
+			</div>
+
+			// solte form sein
+			<a style="color: #fff;" href="https://api.instagram.com/oauth/authorize/?client_id=68ceae6503354d5ba3ec7a3fd9c7e5ee&amp;redirect_uri=http://roobique.com/login/instagram&amp;response_type=code">
+				<!--<a style="color: #fff;" href="/Profile">-->
+				<div class="btnLogin" onClick="">
+                    <p>Login to Instagram</p>
+                </div>
+			</a>
+		</div>
+	</body>
+</html>
