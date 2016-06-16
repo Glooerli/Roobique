@@ -33,8 +33,8 @@ namespace roobique\Wrappers
 
             $db = $client->selectDatabase('roobique');
 
-            $collection = $client->selectCollection('roobique', $collection);
-            $document = $collection->findOne(['_id' => 'user']);
+            $collection = $client->selectCollection($db, $collection);
+            $document = $collection->findOne(['username' => 'janos_imhof']);
             var_dump($document);
         }
 
