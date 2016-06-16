@@ -36,13 +36,6 @@ namespace roobique\Wrappers
             $collection = $client->selectCollection('roobique', $collection);
             $document = $collection->findOne(['_id' => 'user']);
             var_dump($document);
-
-            $time = microtime();
-            $time = explode(' ', $time);
-            $time = $time[1] + $time[0];
-            $finish = $time;
-            $total_time = round(($finish - $start), 4);
-            echo '<br><br>Page generated in '.$total_time.' seconds.';
         }
 
         private function connect()
