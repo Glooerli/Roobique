@@ -9,9 +9,6 @@
 namespace roobique\Wrappers
 {
 
-    use MongoClient;
-    use MongoCollection;
-
     class DatabaseWrapper
     {
         /**
@@ -29,9 +26,23 @@ namespace roobique\Wrappers
 
         public function getConnection($collection)
         {
-            $this->connection = new MongoClient();
-            $this->connection->selectDB($this->db);
-            $this->connection->selectCollection($this->db, $collection);
+            $client = new MongoDB\Client(
+                'mongodb://localhost:27017',
+                ['readPreference' => 'secondaryPreferred']
+            );
+
+            $db = $client->selectDatabase('roobique');
+
+            $collection = $client->selectCollection('roobique', $collection);
+            $document = $collection->findOne(['_id' => 'user']);
+            var_dump($document);
+
+            $time = microtime();
+            $time = explode(' ', $time);
+            $time = $time[1] + $time[0];
+            $finish = $time;
+            $total_time = round(($finish - $start), 4);
+            echo '<br><br>Page generated in '.$total_time.' seconds.';
         }
 
         private function connect()
