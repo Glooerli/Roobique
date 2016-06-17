@@ -5,5 +5,6 @@
 
   $find = new Find();
 
-  $test = $find->find('', 'Images');
-  echo $test;
+  $test = $find->find(array(), 'Images');
+  echo json_decode($test, true);
+  $test[0]['_id']['$id'];
