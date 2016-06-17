@@ -5,8 +5,6 @@
 
     use MongoClient;
     use MongoCollection;
-    use MongoDB;
-    use MongoDB\Client;
 
     abstract class Connector {
 
