@@ -2,6 +2,7 @@
 
   namespace roobique\Database\Queries {
     require('/var/www/roobique/vendor/autoload.php');
+    require('../../Loaders/Autoload.php');
 
     use roobique\Database\Wrappers\Connector;
 

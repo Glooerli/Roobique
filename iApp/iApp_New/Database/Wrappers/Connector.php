@@ -2,6 +2,7 @@
 
   namespace roobique\Database\Wrappers {
     require('/var/www/roobique/vendor/autoload.php');
+    require('../../Loaders/Autoload.php');
 
     use MongoClient;
     use MongoCollection;
