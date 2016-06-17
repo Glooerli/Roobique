@@ -7,4 +7,4 @@
 
   $test = $find->find(array(), 'Images');
   echo $test;
-  echo json_decode($test, true)[0]['_id'];
+  echo json_decode($test, true)[0]['_id']['$id'];
