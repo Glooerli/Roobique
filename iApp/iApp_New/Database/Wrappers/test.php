@@ -6,4 +6,4 @@
   $find = new Find();
 
   $test = $find->find(array(), 'Images');
-  echo $test[0]['_id']->{'id'};
+  echo $test[0]['_id']->{'$id'};
