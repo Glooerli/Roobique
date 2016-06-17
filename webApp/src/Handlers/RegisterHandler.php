@@ -22,7 +22,7 @@ namespace roobique\Handlers
 
         public function execute()
         {
-            $this->databaseWrapper->getMongo();
+            $this->databaseWrapper->getConnection('roobique');
         }
     }
 }
