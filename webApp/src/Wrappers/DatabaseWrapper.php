@@ -34,7 +34,7 @@ namespace roobique\Wrappers
 
             $this->connection = $client->selectDatabase('roobique')->selectCollection('roobique', $collection);
 
-            $result = $this->connection->find( [ 'username' => 'janos_imhof']);
+            $result = $this->connection->finds( [ 'username' => 'janos_imhof']);s
             foreach ($result as $entry) {
                 echo $entry['_id'], ': ', $entry['name'], '\n';
             }
