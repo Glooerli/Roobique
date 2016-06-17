@@ -7,5 +7,5 @@
 
   $test = $find->find('', 'Images');
   foreach ($test as $doc){
-    var_dump($doc);
+    echo $doc;
   }
