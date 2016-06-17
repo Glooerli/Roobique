@@ -6,4 +6,6 @@
   $find = new Find();
 
   $test = $find->find('', 'Images');
-  echo $test;
+  foreach ($test as $doc){
+    var_dump($doc);
+  }
