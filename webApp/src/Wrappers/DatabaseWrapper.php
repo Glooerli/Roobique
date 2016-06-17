@@ -33,8 +33,6 @@ namespace roobique\Wrappers
                 echo $entry['_id'], ': ', $entry['username'], '\n';
             }
 
-            var_dump($result);
-
         }
 
         private function connect($collection)
