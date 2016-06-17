@@ -27,23 +27,19 @@ namespace roobique\Wrappers
 
         public function getConnection($collection)
         {
-            $client = new MongoDB\Client(
-                'mongodb://localhost:27017',
-                ['readPreference' => 'secondaryPreferred']
-            );
-
-            $this->connection = $client->selectDatabase('roobique')->selectCollection('roobique', $collection);
-
-            $result = $this->connection->finds( [ 'username' => 'janos_imhof']);s
+            $this->connect($collection);
+            $result = $this->connection->find( [ 'username' => 'janos_imhof']);
             foreach ($result as $entry) {
                 echo $entry['_id'], ': ', $entry['name'], '\n';
             }
+
         }
 
-        private function connect()
+        private function connect($collection)
         {
             if (!$this->isConnected) {
-
+                $client = new MongoDB\Client('mongodb://localhost:27017');
+                $this->connection = $client->selectDatabase('roobique')->selectCollection($collection);
                 echo 'Connected to Database';
             }else{
 

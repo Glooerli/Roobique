@@ -22,7 +22,7 @@ namespace roobique\Handlers
 
         public function execute()
         {
-            $this->databaseWrapper->getConnection('roobique');
+            $this->databaseWrapper->getConnection('Users');
         }
     }
 }
