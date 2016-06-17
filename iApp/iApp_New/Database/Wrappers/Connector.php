@@ -8,7 +8,7 @@
 
     abstract class Connector {
 
-      abstract protected function find();
+      abstract protected function find($statement, $collection);
 
       public function connect($collection) {
         $client = new MongoDB\Client("mongodb://localhost:27017");

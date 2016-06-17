@@ -5,5 +5,5 @@
 
   $find = new Find();
 
-  $test = $find->find([], 'Images');
+  $test = $find->find('', 'Images');
   echo $test;
