@@ -8,7 +8,7 @@
     class Find extends Connector {
       	public function find($statement, $collection) {
           $collection = $this->connect($collection);
-          $collection->find(array());
+          return $collection->find(array());
         }
     }
   }
