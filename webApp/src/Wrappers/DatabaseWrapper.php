@@ -30,8 +30,10 @@ namespace roobique\Wrappers
             $this->connect($collection);
             $result = $this->connection->find( [ 'username' => 'janos_imhof']);
             foreach ($result as $entry) {
-                echo $entry['_id'], ': ', $entry['name'], '\n';
+                echo $entry['_id'], ': ', $entry['username'], '\n';
             }
+
+            var_dump($result);
 
         }
 
@@ -40,7 +42,7 @@ namespace roobique\Wrappers
             if (!$this->isConnected) {
                 $client = new MongoDB\Client('mongodb://localhost:27017');
                 $this->connection = $client->selectDatabase('roobique')->selectCollection($collection);
-                echo 'Connected to Database';
+                echo 'connected';
             }else{
 
                 die('Etwas ist schief gelaufen!');
