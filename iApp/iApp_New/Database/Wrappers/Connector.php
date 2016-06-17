@@ -5,14 +5,16 @@
 
     use MongoClient;
     use MongoCollection;
+    use MongoDB;
+    use MongoDB\Client;
 
     abstract class Connector {
 
       abstract protected function find($statement, $collection);
 
       public function connect($collection) {
-        $client = new MongoClient("mongodb://localhost:27017");
-        return $client->'roobique'->selectCollection($collection);
+        $client = new MongoDB\Client("mongodb://localhost:27017");
+        return $client->selectDatabase('roobique')->selectCollection($collection);
       }
     }
   }
