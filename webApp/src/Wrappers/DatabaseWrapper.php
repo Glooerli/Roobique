@@ -27,7 +27,7 @@ namespace roobique\Wrappers
 
         public function getConnection($collection)
         {
-            $client = new MongoDB\Client(
+            $client = new MongoDB\Driver\Manager(
                 'mongodb://localhost:27017',
                 ['readPreference' => 'secondaryPreferred']
             );
