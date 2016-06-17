@@ -19,20 +19,12 @@ namespace roobique\Controllers {
         
         public function __construct()
         {
-            session_start();
             $this->registerHandler = new RegisterHandler;
-            $test = new DatabaseWrapper();
-            $test->getConnection('images');
         }
 
-        public function doRun()
+        public function doRun($userData)
         {
-            $this->registerHandler->execute();
-        }
-
-        public function execute($test)
-        {
-            $this->registerHandler->execute();
+            $this->registerHandler->execute($userData);
         }
 
         protected function getBody()

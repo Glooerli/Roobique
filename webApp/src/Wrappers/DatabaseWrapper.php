@@ -23,23 +23,22 @@ namespace roobique\Wrappers
          */
         private $db = 'roobique';
 
+        /**
+         * @var
+         * 
+         */
         private $connection;
 
         public function getConnection($collection)
         {
             $this->connect($collection);
-            $result = $this->connection->find( [ 'username' => 'janos_imhof']);
-            foreach ($result as $entry) {
-                echo $entry['_id'], ' : ', $entry['username'];
-            }
-
         }
 
         private function connect($collection)
         {
             if (!$this->isConnected) {
                 $client = new MongoDB\Client('mongodb://localhost:27017');
-                $this->connection = $client->selectDatabase('roobique')->selectCollection($collection);
+                $this->connection = $client->selectDatabase($this->db)->selectCollection($collection);
             }else{
 
                 die('Etwas ist schief gelaufen!');
