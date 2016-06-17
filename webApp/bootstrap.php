@@ -6,7 +6,6 @@ namespace roobique
     use roobique\ValueObjects\Uri;
 
     require __DIR__ . '/src/autoload.php';
-    require __DIR__ . '/var/www/roobique/vendor/autoload.php';
 
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
