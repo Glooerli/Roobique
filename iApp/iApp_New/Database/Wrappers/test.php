@@ -6,4 +6,4 @@
   $find = new Find();
 
   $test = $find->find('', 'Images');
-  echo $test;
+  echo '<pre>' . $test . '</pre>';
