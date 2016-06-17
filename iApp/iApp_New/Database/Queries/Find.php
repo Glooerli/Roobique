@@ -1,7 +1,7 @@
 <?php
 
   namespace roobique\Database\Queries {
-    require('../../Loaders/Autoload.php');
+    require('/var/www/roobique/vendor/autoload.php');
 
     use roobique\Database\Wrappers\Connector;
     use MongoClient;
