@@ -6,4 +6,4 @@
   $find = new Find();
 
   $test = $find->find('', 'Images');
-  echo '<pre>' . $test . '</pre>';
+  echo '<pre>' . print_r(json_decode($test, true)) . '</pre>';
