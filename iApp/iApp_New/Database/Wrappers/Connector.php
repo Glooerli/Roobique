@@ -5,7 +5,6 @@
 
     use MongoClient;
     use MongoCollection;
-    use MongoDB;
 
     abstract class Connector {
 
@@ -13,7 +12,7 @@
 
       public function connect($collection) {
         $client = new MongoClient("mongodb://localhost:27017");
-        return $client->selectDatabase('roobique')->selectCollection($collection);
+        return $client->'roobique'->selectCollection($collection);
       }
     }
   }
