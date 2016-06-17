@@ -8,5 +8,6 @@
   $test = $find->find(array(), 'Images');
   json_decode($test, true);
   foreach($test as $bla ){
-    echo $bla['_id']->{'$id'};
+    print_r($bla);
+    echo $bla[0]['_id']->{'$id'};
   }
