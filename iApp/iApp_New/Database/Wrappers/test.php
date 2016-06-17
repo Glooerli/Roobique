@@ -6,5 +6,7 @@
   $find = new Find();
 
   $test = $find->find(array(), 'Images');
-  echo $test;
-  echo json_decode($test, true)[0]['_id']->{'$id'};
+  json_decode($test, true);
+  foreach($test as $bla ){
+    echo $test[0]['_id']->{'$id'};
+  }
