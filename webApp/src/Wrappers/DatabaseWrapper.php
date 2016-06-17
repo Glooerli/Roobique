@@ -27,6 +27,12 @@ namespace roobique\Wrappers
 
         public function getConnection($collection)
         {
+            $manager = new MongoDB\Driver\Manager("mongodb://localhost:27017");
+
+            $collection = new MongoDB\Collection($manager, "testcollection", "items");
+            $initialCollectionCount = $collection->count();
+
+
             $client = new MongoDB\Driver\Manager(
                 'mongodb://localhost:27017',
                 ['readPreference' => 'secondaryPreferred']
