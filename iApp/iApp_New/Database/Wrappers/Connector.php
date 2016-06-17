@@ -6,6 +6,7 @@
 
     use MongoClient;
     use MongoCollection;
+    use MongoDB;
 
     abstract class Connector {
 
