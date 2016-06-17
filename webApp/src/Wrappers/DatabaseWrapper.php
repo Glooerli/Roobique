@@ -40,7 +40,6 @@ namespace roobique\Wrappers
             if (!$this->isConnected) {
                 $client = new MongoDB\Client('mongodb://localhost:27017');
                 $this->connection = $client->selectDatabase('roobique')->selectCollection($collection);
-                echo 'connected';
             }else{
 
                 die('Etwas ist schief gelaufen!');
