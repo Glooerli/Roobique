@@ -30,7 +30,7 @@ namespace roobique\Wrappers
             $this->connect($collection);
             $result = $this->connection->find( [ 'username' => 'janos_imhof']);
             foreach ($result as $entry) {
-                echo $entry['_id'], ': ', $entry['username'];
+                echo $entry['_id'], ' : ', $entry['username'];
             }
 
         }
