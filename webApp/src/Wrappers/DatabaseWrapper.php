@@ -32,15 +32,12 @@ namespace roobique\Wrappers
                 ['readPreference' => 'secondaryPreferred']
             );
 
-            $db = $client->selectDatabase('roobique');
+            $this->connection = $client->selectDatabase('roobique')->selectCollection('roobique', $collection);
 
-            $collection = $client->selectCollection($db, $collection);
-            $result = $collection->find( [ 'username' => 'janos_imhof']);
+            $result = $this->connection->find( [ 'username' => 'janos_imhof']);
             foreach ($result as $entry) {
                 echo $entry['_id'], ': ', $entry['name'], '\n';
             }
-            
-            var_dump($result);
         }
 
         private function connect()
