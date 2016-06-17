@@ -6,6 +6,4 @@
   $find = new Find();
 
   $test = $find->find('', 'Images');
-  foreach ($test as $doc){
-    echo $doc;
-  }
+  echo $test;

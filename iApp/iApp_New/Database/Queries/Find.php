@@ -9,7 +9,7 @@
     class Find extends Connector {
       	public function find($statement, $collection) {
           $collection = $this->connect($collection);
-          return $collection->find(array());
+          return json_encode(iterator_to_array($collection->find(array()), false));
         }
     }
   }
