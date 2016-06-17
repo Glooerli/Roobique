@@ -5,7 +5,6 @@
     require('../../Loaders/Autoload.php');
 
     use roobique\Database\Wrappers\Connector;
-    use MongoDB;
 
     class Find extends Connector {
       	public function find($statement, $collection) {
