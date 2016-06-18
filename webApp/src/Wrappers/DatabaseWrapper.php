@@ -31,7 +31,7 @@ namespace roobique\Wrappers
 
         public function getConnection($collection)
         {
-            $this->connect($collection);
+            return $this->connect($collection);
         }
 
         private function connect($collection)

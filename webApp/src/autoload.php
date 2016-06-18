@@ -16,6 +16,7 @@ spl_autoload_register(
                 'roobique\\handlers\\registerhandler' => '/Handlers/RegisterHandler.php',
                 'roobique\\loaders\\loader' => '/Loaders/Loader.php',
                 'roobique\\queries\\fetchaccesstokenfrominstagramquery' => '/Queries/FetchAccessTokenFromInstagramQuery.php',
+                'roobique\\queries\\registeruserquery' => '/Queries/RegisterUserQuery.php',
                 'roobique\\responses\\response' => '/Responses/Response.php',
                 'roobique\\routers\\router' => '/Routers/Router.php',
                 'roobique\\valueobjects\\uri' => '/ValueObjects/Uri.php',

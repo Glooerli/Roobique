@@ -9,20 +9,22 @@
 namespace roobique\Handlers 
 {
 
-    use roobique\Wrappers\DatabaseWrapper;
+
+    use roobique\Queries\RegisterUserQuery;
 
     class RegisterHandler
     {
-        private $databaseWrapper;
+        
+        private $registerQuery;
 
         public function __construct()
         {
-            $this->databaseWrapper = new DatabaseWrapper;
+            $this->registerQuery = new RegisterUserQuery();
         }
 
-        public function execute()
+        public function execute($userData)
         {
-            $this->databaseWrapper->getConnection('Users');
+            $this->registerQuery->execute($userData);
         }
     }
 }
