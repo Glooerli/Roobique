@@ -10,21 +10,25 @@ namespace roobique\Handlers
 {
 
 
+    use roobique\Queries\FindUserFromDatabaseQuery;
     use roobique\Queries\RegisterUserQuery;
 
     class RegisterHandler
     {
         
         private $registerQuery;
+        private $findQuery;
 
         public function __construct()
         {
             $this->registerQuery = new RegisterUserQuery();
+            $this->findQuery = new FindUserFromDatabaseQuery();
         }
 
         public function execute($userData)
         {
-            $this->registerQuery->execute($userData);
+            $this->findQuery->execute($userData);
+            //$this->registerQuery->execute($userData);
         }
     }
 }
