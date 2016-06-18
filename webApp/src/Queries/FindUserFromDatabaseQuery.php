@@ -18,7 +18,7 @@ namespace roobique\Queries {
 
         private function find($userData)
         {
-            $InstaID = $userData(array(['id']));
+            $InstaID = $userData['id'];
 
             $connection = $this->connectCollection('Users');
             $userInformation = $connection->find(array('id' => $InstaID));
