@@ -22,10 +22,12 @@ namespace roobique\Queries {
 
             $connection = $this->connectCollection('Users');
             $userInformation = $connection->find(array('id' => $InstaID));
-            foreach ($userInformation as $doc) {
-                echo $doc['_id'];
-                echo $doc['username'];
-            }
+            echo $userInformation['username'];
+            echo $userInformation['_id'];
+//            foreach ($userInformation as $doc) {
+//                echo $doc['_id'];
+//                echo $doc['username'];
+//            }
         }
     }
 }
