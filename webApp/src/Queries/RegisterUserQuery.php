@@ -19,8 +19,8 @@ namespace roobique\Queries
         private function register($userData)
         {
           
-            $connection = $this->connectCollection('users');
-            $connection->insertOne([$userData, 'Users']);
+            $connection = $this->connectCollection('Users');
+            $connection->insertOne([$userData]);
 
             echo "Inserted with Object ID ";
         }
