@@ -3,12 +3,13 @@
   namespace roobique\Database\Wrappers {
     require('/var/www/roobique/vendor/autoload.php');
     require('../../Loaders/Autoload.php');
-    
+
     use MongoDB;
 
     abstract class Connector {
 
       abstract protected function find($statement, $collection);
+      abstract protected function random($collection);
 
       public function connect($collection) {
         $client = new MongoDB\Client("mongodb://localhost:27017");
