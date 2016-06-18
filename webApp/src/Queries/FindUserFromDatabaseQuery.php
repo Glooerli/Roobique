@@ -19,8 +19,7 @@ namespace roobique\Queries {
         private function find($userData)
         {
             foreach ($userData as $item){
-                echo $item['username'];
-                echo $item['bio'];
+                echo $item;
             }
 
 //            $connection = $this->connectCollection('Users');
