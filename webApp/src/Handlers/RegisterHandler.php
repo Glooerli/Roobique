@@ -27,9 +27,8 @@ namespace roobique\Handlers
 
         public function execute($userData)
         {
-            $username = $userData{'username'};
+            $username = $userData['user']['username'];
             echo $username;
-            var_dump($userData);
             //$this->findQuery->execute($userData);
             //$this->registerQuery->execute($userData);
         }
