@@ -21,11 +21,10 @@ namespace roobique\Controllers {
         {
             $this->registerHandler = new RegisterHandler;
         }
-
-        protected function doRun($userData)
+        
+        public function execute($userData)
         {
             $this->registerHandler->execute($userData);
-            
         }
 
         protected function getBody()

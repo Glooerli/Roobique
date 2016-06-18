@@ -22,7 +22,7 @@ namespace roobique\Queries
             $connection = $this->connectCollection('users');
             $connection->insertOne([$userData => 'Users']);
 
-            echo "Inserted with Object ID '{$connection->getInsertedId()}'";
+            echo "Inserted with Object ID ";
         }
     }
 }
