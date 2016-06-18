@@ -15,6 +15,7 @@ spl_autoload_register(
                 'roobique\\controllers\\profilepagecontroller' => '/Controllers/ProfilePageController.php',
                 'roobique\\handlers\\registerhandler' => '/Handlers/RegisterHandler.php',
                 'roobique\\loaders\\loader' => '/Loaders/Loader.php',
+                'roobique\\queries\\abstractquery' => '/Queries/AbstractQuery.php',
                 'roobique\\queries\\fetchaccesstokenfrominstagramquery' => '/Queries/FetchAccessTokenFromInstagramQuery.php',
                 'roobique\\queries\\registeruserquery' => '/Queries/RegisterUserQuery.php',
                 'roobique\\responses\\response' => '/Responses/Response.php',
