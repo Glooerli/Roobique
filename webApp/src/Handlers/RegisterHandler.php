@@ -29,6 +29,7 @@ namespace roobique\Handlers
         {
             $username = $userData{'username'};
             echo $username;
+            var_dump($userData);
             //$this->findQuery->execute($userData);
             //$this->registerQuery->execute($userData);
         }
