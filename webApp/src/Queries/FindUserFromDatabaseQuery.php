@@ -9,7 +9,6 @@
 namespace roobique\Queries {
 
 
-
     class FindUserFromDatabaseQuery extends AbstractQuery
     {
         public function execute($userData)
@@ -24,7 +23,8 @@ namespace roobique\Queries {
             $connection = $this->connectCollection('Users');
             $userInformation = $connection->find(array('InstaID' => $InstaID));
             foreach ($userInformation as $doc) {
-                var_dump($doc);
+                echo $doc['username'];
+                echo $doc['_id'];
             }             
         }
     }
