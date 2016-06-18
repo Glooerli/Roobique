@@ -13,3 +13,4 @@
   $random = new Random();
 
   $test = $random->random('Images');
+  echo $test;

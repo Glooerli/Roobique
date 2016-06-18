@@ -5,10 +5,10 @@
 
     use roobique\Database\Wrappers\Connector;
 
-    class Find extends Connector {
-      	public function find($statement, $collection) {
+    class Count extends Connector {
+      	public function count($collection) {
           $collection = $this->connect($collection);
-          return json_encode(iterator_to_array($collection->find($statement), false));
+          return $collection->count(array());
         }
     }
   }
