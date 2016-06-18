@@ -23,10 +23,8 @@ namespace roobique\Queries {
             $connection = $this->connectCollection('Users');
             $userInformation = $connection->find(array('id' => $InstaID));
             foreach ($userInformation as $doc) {
-                if (isset($doc['id, username'])) {
-                    return $doc['id, username'];
-                }
-            }             
+                return $doc['id, username'];
+            }
         }
     }
 }
