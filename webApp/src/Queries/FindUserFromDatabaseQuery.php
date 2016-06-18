@@ -18,12 +18,12 @@ namespace roobique\Queries {
 
         private function find($userData)
         {
-            $InstaID = $userData['id'];
+            $InstaID = $userData['_id'];
 
             $connection = $this->connectCollection('Users');
-            $userInformation = $connection->find(array('id' => $InstaID));
+            $userInformation = $connection->find(array('_id' => $InstaID));
             foreach ($userInformation as $doc) {
-                echo $doc['id'];
+                echo $doc['_id'];
                 echo $doc['username'];
             }
         }
