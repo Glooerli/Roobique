@@ -20,7 +20,7 @@ namespace roobique\Queries {
         {
             $InstaID = $userData['InstaID'];
             echo $userData['InstaID'];
-            var_dump($userData);
+            echo $userData;
 
 //            $connection = $this->connectCollection('Users');
 //            $userInformation = $connection->find(array('id' => $InstaID));
