@@ -18,9 +18,12 @@ namespace roobique\Queries {
 
         private function find($userData)
         {
+            var_dump($userData);
+            echo $userData['user']['username'];
+
             $connection = $this->connectCollection('Users');
             if (isset($userData['user']['username'])) {
-                var_dump($connection->find(array('username' => ($userData['user']['username']))));
+                return($connection->find(array('username' => ($userData['user']['username']))));
             }
         }
     }
