@@ -12,8 +12,7 @@
           $collection = $this->connect($collection);
           return $collection->count(array());
         }
-
-        public function random($collection) {}
+        
         public function find($statement, $collection) {}
     }
   }
