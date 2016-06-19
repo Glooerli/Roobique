@@ -36,7 +36,6 @@ namespace roobique\Controllers
                 'profile_picture' => $instaUserDataArray['user']['profile_picture'],
                 'full_name' => $instaUserDataArray['user']['full_name']
             );
-            var_dump($instaUserDatas);
             $this->loginAction->execute($instaUserDatas);
         }
 

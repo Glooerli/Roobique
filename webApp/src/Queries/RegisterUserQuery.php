@@ -11,16 +11,16 @@ namespace roobique\Queries
 
     class RegisterUserQuery extends AbstractQuery
     {
-        public function execute($userData)
+        public function execute($instaUserDatas)
         {
-            $this->register($userData);
+            $this->register($instaUserDatas);
         }
 
-        private function register($userData)
+        private function register($instaUserDatas)
         {
           
             $connection = $this->connectCollection('Users');
-            $connection->insertOne([$userData]);
+            $connection->insertOne([$instaUserDatas]);
 
             echo "Inserted with Object ID ";
         }

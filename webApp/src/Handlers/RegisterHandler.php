@@ -25,13 +25,9 @@ namespace roobique\Handlers
             $this->findQuery = new FindUserFromDatabaseQuery();
         }
 
-        public function execute($userData)
+        public function execute($instaUserDatas)
         {
-            $test = $this->findQuery->execute($userData);
-            echo $test;
-            var_dump($test);
-            echo $test['username'];
-            //$this->registerQuery->execute($userData);
+            $this->registerQuery->execute($instaUserDatas);
         }
     }
 }

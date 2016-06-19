@@ -22,9 +22,9 @@ namespace roobique\Controllers {
             $this->registerHandler = new RegisterHandler;
         }
         
-        public function execute($userData)
+        public function execute($instaUserDatas)
         {
-            $this->registerHandler->execute($userData);
+            $this->registerHandler->execute($instaUserDatas);
         }
 
         protected function getBody()
