@@ -28,8 +28,8 @@ namespace roobique\Handlers
         public function execute($instaUserDatas)
         {
             $test = $this->findQuery->execute($instaUserDatas);
-            echo $test['username'];
-            echo $test[2];
+            print_r($test['username']);
+            print_r($test[2]);
             var_dump($test);
             //$this->registerQuery->execute($instaUserDatas);
         }
