@@ -19,7 +19,7 @@ namespace roobique\Queries {
         private function find($userData)
         {
             $connection = $this->connectCollection('Users');
-            if (isset($userData)) {
+            if (isset($userData['user']['username'])) {
                 echo 'true';
                 return($connection->find(array('username' => ($userData["user"]["username"]))));
             }
