@@ -19,7 +19,7 @@ namespace roobique\Queries {
         private function find($instaUserDatas)
         {
             $connection = $this->connectCollection('Users');
-                return $connection->find(array('username' => 'luki.dc'));
+            return json_encode(iterator_to_array($connection->find(array('username' => $instaUserDatas['username']), false)));
         }
     }
 }
