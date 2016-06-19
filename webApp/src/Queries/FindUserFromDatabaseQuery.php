@@ -20,7 +20,7 @@ namespace roobique\Queries {
         {
             $connection = $this->connectCollection('Users');
             if (isset($userData['user']['username'])) {
-                return $connection->findOne(array("username" => $userData['user']['username']));
+                return $connection->findOne(array('user' => $userData['user']['username']));
             }
         }
     }
