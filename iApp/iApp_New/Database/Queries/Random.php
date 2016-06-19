@@ -9,9 +9,7 @@
     class Random extends Count {
       	public function random($collection) {
           $collection = $this->connect($collection);
-          echo $this->count('Images');
-          echo rand(0, $this->count($collection));
-    		  return json_encode(iterator_to_array($collection->find(array(), ['skip' => rand(0, $this->count($collection)), 'limit' => 1]), false));
+    		  return json_encode(iterator_to_array($collection->find(array(), ['skip' => rand(0, $this->count('Images')), 'limit' => 1]), false));
         }
     }
   }
