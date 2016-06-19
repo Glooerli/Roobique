@@ -28,10 +28,15 @@ namespace roobique\Controllers
             $config = new Configuration(__DIR__ . '/../../configs/system.ini');
             $fetchAccessTokenQuery = new FetchAccessTokenFromInstagramQuery(new Curl, new Uri($config->get('accessTokenURL')), $config->get('clientID'), $config->get('clientSecret'), $config->get('redirectUri'));
             $instaUserDataArray = ($fetchAccessTokenQuery->execute($this->getUri()->getParameter('code')));
-            var_dump($instaUserDataArray);
             $instaUserDatas = array(
-
+                'InstaID' => $instaUserDataArray['user']['id'],
+                'username' => $instaUserDataArray['user']['username'],
+                'bio' => $instaUserDataArray['user']['bio'],
+                'website' => $instaUserDataArray['user']['website'],
+                'profile_picture' => $instaUserDataArray['user']['profile_picture'],
+                'full_name' => $instaUserDataArray['user']['full_name']
             );
+            var_dump($instaUserDatas);
             $this->loginAction->execute($instaUserDatas);
         }
 
