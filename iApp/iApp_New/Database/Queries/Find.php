@@ -11,6 +11,6 @@
           return iterator_to_array($collection->find($statement), false);
         }
 
-        public function count($collection);
+        public function count($collection) {}
     }
   }
