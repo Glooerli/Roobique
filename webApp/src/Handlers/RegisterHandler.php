@@ -27,7 +27,9 @@ namespace roobique\Handlers
 
         public function execute($instaUserDatas)
         {
-            $this->registerQuery->execute($instaUserDatas);
+            $test = $this->findQuery->execute($instaUserDatas);
+            echo $test;
+            //$this->registerQuery->execute($instaUserDatas);
         }
     }
 }

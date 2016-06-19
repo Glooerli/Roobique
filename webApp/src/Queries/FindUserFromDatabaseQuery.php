@@ -11,17 +11,15 @@ namespace roobique\Queries {
 
     class FindUserFromDatabaseQuery extends AbstractQuery
     {
-        public function execute($userData)
+        public function execute($instaUserDatas)
         {
-            $this->find($userData);
+            return $this->find($instaUserDatas);
         }
 
-        private function find($userData)
+        private function find($instaUserDatas)
         {
             $connection = $this->connectCollection('Users');
-            if (isset($userData['user']['username'])) {
-                return $connection->find(array('username' => $userData['user']['username'], 'username'));
-            }
+                return $connection->find(array('username' => 'luki.dc'));
         }
     }
 }
