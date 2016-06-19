@@ -5,7 +5,9 @@
 
     use roobique\Database\Wrappers\Connector;
 
-    class Count extends Connector {
+    abstract class Count extends Connector {
+        abstract protected function random($collection);
+
       	public function count($collection) {
           $collection = $this->connect($collection);
           return $collection->count(array());

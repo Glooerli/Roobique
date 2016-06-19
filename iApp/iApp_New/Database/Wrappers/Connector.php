@@ -7,9 +7,7 @@
     use MongoDB;
 
     abstract class Connector {
-
       abstract protected function find($statement, $collection);
-      abstract protected function random($collection);
       abstract protected function count($collection);
 
       public function connect($collection) {

@@ -10,5 +10,7 @@
           $collection = $this->connect($collection);
           return json_encode(iterator_to_array($collection->find($statement), false));
         }
+
+        public function count($collection);
     }
   }
