@@ -13,5 +13,6 @@
         }
 
         public function find($statement, $collection) {}
+        public function insert($statement, $collection) {}
     }
   }

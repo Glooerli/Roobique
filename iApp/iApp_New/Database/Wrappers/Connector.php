@@ -8,6 +8,7 @@
 
     abstract class Connector {
       abstract protected function find($statement, $collection);
+      abstract protected function insert($statement, $collection);
       abstract protected function count($collection);
 
       public function connect($collection) {

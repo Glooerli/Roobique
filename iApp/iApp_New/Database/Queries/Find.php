@@ -17,5 +17,6 @@
         }
 
         public function count($collection) {}
+        public function insert($statement, $collection) {}
     }
   }
