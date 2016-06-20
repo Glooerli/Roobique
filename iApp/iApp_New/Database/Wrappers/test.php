@@ -26,9 +26,9 @@
 
   $insert = new Insert();
 
-  $insert->insert(array("InstaID" : "281376780",
-	                      "username" : "janos_imhof",
-	                      "bio" : "",
-	                      "website" : "",
-	                      "profile_picture" : "https://scontent.cdninstagram.com/t51.2885-19/s150x150/13109059_1702829883313548_768875236_a.jpg",
-	                      "full_name" : "Janos Imhof"), 'Users');
+  $insert->insert(array("InstaID" => "281376780",
+	                      "username" => "janos_imhof",
+	                      "bio" => "",
+	                      "website" => "",
+	                      "profile_picture" => "https://scontent.cdninstagram.com/t51.2885-19/s150x150/13109059_1702829883313548_768875236_a.jpg",
+	                      "full_name" => "Janos Imhof"), 'Users');
