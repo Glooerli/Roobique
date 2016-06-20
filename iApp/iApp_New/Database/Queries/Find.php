@@ -8,7 +8,11 @@
     class Find extends Connector {
       	public function find($statement, $collection) {
           $collection = $this->connect($collection);
-        return json_encode(iterator_to_array($collection->find($statement), false), JSON_FORCE_OBJECT);
+          foreach(iterator_to_array($collection->find($statement), false) as $result){
+            $result[0]['_id'] = (string)$result[0]['_id']; 
+            array_push($results, $result);
+          }
+          return json_encode($results);
         }
 
         public function count($collection) {}
