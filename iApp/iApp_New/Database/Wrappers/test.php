@@ -6,7 +6,7 @@
   $find = new Find();
 
   $test = $find->find(array(), 'Images');
-  //print_r($test);
+  print_r($test);
 
   /* use roobique\Database\Queries\Random;
 
