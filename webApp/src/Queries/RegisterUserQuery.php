@@ -18,7 +18,9 @@ namespace roobique\Queries
 
         private function register($instaUserDatas)
         {
-          
+
+            var_dump($instaUserDatas);
+            
             $connection = $this->connectCollection('Users');
             $connection->insertOne([$instaUserDatas]);
 
