@@ -22,7 +22,7 @@
   $test = $count->count('Images');
   echo $test; */
 
-  use roobique\Database\Queries\Find;
+  use roobique\Database\Queries\Insert;
 
   $insert = new Insert();
 
