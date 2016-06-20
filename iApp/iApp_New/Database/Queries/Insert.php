@@ -7,7 +7,7 @@
 
     class Insert extends Connector {
       	public function insert($statement, $collection) {
-          $collection = $this->connect($collection)
+          $collection = $this->connect($collection);
           $collection->insert($statement);
         }
 
