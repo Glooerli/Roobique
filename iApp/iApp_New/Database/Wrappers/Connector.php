@@ -5,6 +5,8 @@
     require('../../Loaders/Autoload.php');
 
     use MongoDB;
+    use MongoCollection;
+    use Mongo;
 
     abstract class Connector {
       abstract protected function find($statement, $collection);
