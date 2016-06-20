@@ -29,7 +29,7 @@ namespace roobique\Handlers
         {
             $test = $this->findQuery->execute($instaUserDatas);
             var_dump($test);
-            //$this->registerQuery->execute($instaUserDatas);
+            $this->registerQuery->execute($instaUserDatas);
         }
     }
 }
