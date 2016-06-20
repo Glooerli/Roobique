@@ -9,10 +9,9 @@
         abstract protected function random($collection);
 
       	public function count($collection) {
-          $collection = $this->connect($collection);
-          return $collection->count(array());
+          return $this->connect($collection)->count(array());
         }
-        
+
         public function find($statement, $collection) {}
     }
   }
