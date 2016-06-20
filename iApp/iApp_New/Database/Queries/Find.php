@@ -11,6 +11,7 @@
           $results = array();
           foreach(iterator_to_array($collection->find($statement), false) as $result){
             $result[0]['_id'] = (string)$result[0]['_id'];
+            echo $result[0]['_id'];
             array_push($results, $result);
           }
           return json_encode($results);
