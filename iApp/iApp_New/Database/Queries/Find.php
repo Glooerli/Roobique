@@ -10,8 +10,7 @@
           $collection = $this->connect($collection);
           $results = array();
           foreach(iterator_to_array($collection->find($statement), false) as $result){
-            print_r($result);
-            $result[0]['_id'] = (string)$result[0]['_id'];
+            $result['_id'] = (string)$result['_id'];
             array_push($results, $result);
           }
           return json_encode($results);
