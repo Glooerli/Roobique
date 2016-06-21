@@ -36,6 +36,14 @@ namespace roobique\Routers
                     return new LoginController;
                 case '/roobique/webApp/action/login':
                     return new LoginActionController;
+                case '/':
+                    return new FrontPageController;
+                case '/Profile':
+                    return new ProfilePageController();
+                case '/login/instagram':
+                    return new LoginController;
+                case '/action/login':
+                    return new LoginActionController;
             }
         }
     }
