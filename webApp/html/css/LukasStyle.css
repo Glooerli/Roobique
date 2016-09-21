@@ -1,3 +1,7 @@
+body {
+     background-color: red;
+}
+
 div.LogoAndText {
      position: relative;
      height: 250px;
