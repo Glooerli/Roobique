@@ -8,7 +8,6 @@
 
 namespace roobique\Wrappers
 {
-    use MongoDB;
 
     class DatabaseWrapper
     {
@@ -37,8 +36,10 @@ namespace roobique\Wrappers
         private function connect($collection)
         {
             if (!$this->isConnected) {
-                $client = new MongoDB\Client('mongodb://localhost:27017');
-                $this->connection = $client->selectDatabase($this->db)->selectCollection($collection);
+
+                $client =  new \MongoDB\Driver\Manager("mongodb://localhost:27017");
+                
+
             }else{
 
                 die('Etwas ist schief gelaufen!');

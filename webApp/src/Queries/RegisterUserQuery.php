@@ -21,8 +21,8 @@ namespace roobique\Queries
 
             var_dump($instaUserDatas);
             
-            //$connection = $this->connectCollection('Users');
-            //$connection->insertOne([$instaUserDatas]);
+            
+            $connection = $this->connectCollection('Users');
 
             echo "Inserted with Object ID ";
         }
