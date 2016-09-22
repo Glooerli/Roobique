@@ -28,20 +28,16 @@ namespace roobique\Wrappers
          */
         private $connection;
 
-        public function getConnection($collection)
+        public function getConnection()
         {
-            return $this->connect($collection);
+            return $this->connect();
         }
 
-        private function connect($collection)
+        private function connect()
         {
             if (!$this->isConnected) {
-
-                $client =  new \MongoDB\Driver\Manager("mongodb://localhost:27017");
-                
-
+                $this->connection =  new \MongoDB\Driver\Manager("mongodb://localhost:27017");
             }else{
-
                 die('Etwas ist schief gelaufen!');
             }
 

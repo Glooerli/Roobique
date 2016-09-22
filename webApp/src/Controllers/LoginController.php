@@ -10,6 +10,7 @@ namespace roobique\Controllers
 {
 
     use roobique\Configuration;
+    use roobique\Handlers\LoginRegisterHandler;
     use roobique\Queries\FetchAccessTokenFromInstagramQuery;
     use roobique\ValueObjects\Uri;
     use roobique\Wrappers\Curl;
@@ -20,7 +21,7 @@ namespace roobique\Controllers
         
         public function __construct()
         {
-            $this->loginAction = new LoginActionController;
+            $this->loginAction = new LoginRegisterHandler();
         }
 
         protected function doRun()
@@ -28,7 +29,7 @@ namespace roobique\Controllers
             $config = new Configuration(__DIR__ . '/../../configs/system.ini');
             $fetchAccessTokenQuery = new FetchAccessTokenFromInstagramQuery(new Curl, new Uri($config->get('accessTokenURL')), $config->get('clientID'), $config->get('clientSecret'), $config->get('redirectUri'));
             $instaUserDataArray = ($fetchAccessTokenQuery->execute($this->getUri()->getParameter('code')));
-            $instaUserDatas = array(
+            $instaUserArray = array(
                 'InstaID' => $instaUserDataArray['user']['id'],
                 'username' => $instaUserDataArray['user']['username'],
                 'bio' => $instaUserDataArray['user']['bio'],
@@ -36,7 +37,8 @@ namespace roobique\Controllers
                 'profile_picture' => $instaUserDataArray['user']['profile_picture'],
                 'full_name' => $instaUserDataArray['user']['full_name']
             );
-            $this->loginAction->execute($instaUserDatas);
+            
+            $this->loginAction
         }
 
         protected function getBody()
